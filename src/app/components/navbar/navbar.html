@@ -1,0 +1,11 @@
+<header class="navbar">
+    <div class="navbar-inner container">
+        <a routerLink="/" class="brand">CodeLine</a>
+        <button class="burger" (click)="toggleMenu()">Menu</button>
+        <nav class="nav-links" [class.open]=""menuouvert>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="menuOuvert = false">Accueil</a>
+            <a routerLink="/a-propos" routerLinkActive="active" (click)="menuOuvert = false">A propos</a>
+            <a routerLink="/contact" routerLinkActive="acitve" (click)="menuOuvert= false">Contact</a>
+        </nav>
+    </div>
+</header>

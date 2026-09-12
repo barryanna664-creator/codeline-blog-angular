@@ -1,0 +1,29 @@
+.footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    margin-top: 64px;
+}
+
+.footer-inner {
+    padding: 28px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
