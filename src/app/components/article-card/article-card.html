@@ -1,1 +1,12 @@
-<p>article-card works!</p>
+<a class="card" [routerLink]="['/articles', article.id]">
+    <img class="card-image" [src]="article.image" [alt]="article.titre">
+    <div class="card-body">
+        <span class="card-category">{{ article.categorie }}</span>
+        <h3 class="card-title">{{ article.titre }}</h3>
+        <p class="card-title">{{ article.resume }}</p>
+        <div class="card-meta">
+            <span>{{ article.auteur }}</span>
+            <span>{{ article.dateDeParution | date: 'dd MM yyyy' }}</span>
+        </div>
+    </div>
+</a>
