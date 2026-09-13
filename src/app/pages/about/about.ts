@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './about.html',
 })
 export class About {
-  members= [
+  membres= [
     {nom:'Anna Barry',role:'Développeuse Angular-Composants & services'},
     {nom:'Nogaye Diouf',role:'Développeuse Angular-Pages & Routags'}
 
