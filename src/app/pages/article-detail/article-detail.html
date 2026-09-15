@@ -1,1 +1,33 @@
-<p>article-detail works!</p>
+<div class="container detail-container" *ngIf="article; else introuvable">
+  <a routerLink="/" class="back-link">&larr; Retour aux articles</a>
+
+  <span class="category-tag">{{ article.categorie }}</span>
+  <h1>{{ article.titre }}</h1>
+
+  <div class="meta-row">
+    <span>Par {{ article.auteur }}</span>
+    <span>&bull;</span>
+    <span>{{ article.dateDeParution | date:'dd MMMM yyyy' }}</span>
+  </div>
+
+  <img class="detail-image" [src]="article.image" [alt]="article.titre">
+
+  <div class="detail-content">
+    <p *ngFor="let paragraphe of article.contenu.split('\n\n')">{{ paragraphe }}</p>
+  </div>
+
+  <div class="similar-section" *ngIf="articlesSimilaires.length > 0">
+    <h2>À lire aussi</h2>
+    <div class="similar-grid">
+      <app-article-card *ngFor="let a of articlesSimilaires" [article]="a"></app-article-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #introuvable>
+  <div class="container not-found">
+    <h2>Article introuvable</h2>
+    <p>L'article que vous cherchez n'existe pas ou a été retiré.</p>
+    <a routerLink="/" class="btn">Retour à l'accueil</a>
+  </div>
+</ng-template>
