@@ -1,1 +1,29 @@
-<p>home works!</p>
+<section class="hero">
+  <div class="container">
+    <h1>Le blog qui décrypte le développement web</h1>
+    <p>Articles, tutoriels et retours d'expérience autour d'Angular, écrits par des étudiants pour des étudiants.</p>
+  </div>
+</section>
+
+<section class="container articles-section">
+  <h2 class="section-title">Derniers articles</h2>
+  <p class="section-subtitle">{{ articlesFiltres.length }} article(s) disponible(s)</p>
+
+  <div class="filters">
+    <button 
+      *ngFor="let categorie of categories" 
+      class="filter-btn"
+      [class.active]="categorie === categoriesSelectionnee"
+      (click)="filtrerParCategorie(categorie)">
+      {{ categorie }}
+    </button>
+  </div>
+
+  <div class="articles-grid" *ngIf="articlesFiltres.length > 0; else aucunArticle">
+    <app-article-card *ngFor="let article of articlesFiltres" [article]="article"></app-article-card>
+  </div>
+
+  <ng-template #aucunArticle>
+    <p class="empty-state">Aucun article dans cette catégorie pour le moment.</p>
+  </ng-template>
+</section>

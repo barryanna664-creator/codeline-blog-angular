@@ -1,59 +1,46 @@
-# CodelineBlogAngular
+# CodeLine — Blog Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.6.
+Projet réalisé dans le cadre du cours **Technologie Web 3** (Licence 1 Informatique).
+Site vitrine statique développé avec **Angular** (dernière version stable), sans base de données ni API externe.
 
-## Development server
+## Thème choisi
 
-To start a local development server, run:
+**CodeLine** est un blog étudiant consacré au développement web, présentant des articles pédagogiques sur Angular et les bonnes pratiques front-end.
+
+## Binôme
+
+| Nom | Rôle |
+|---|---|
+| Anna Barry | Composants, service et données (navbar, footer, article-card, modèle, service) |
+| Nogaye Diouf | Pages et routage (accueil, détail d'article, à propos, contact) |
+
+## Fonctionnalités
+
+- **Page d'accueil** : liste des articles générée dynamiquement à partir d'un tableau de données statiques, avec filtre par catégorie.
+- **Page de détail** (`/articles/:id`) : contenu complet d'un article, récupéré via un paramètre d'URL.
+- **Page « À propos »** : présentation du site et du binôme.
+- **Page « Contact »** : formulaire (non connecté à un serveur) utilisant le binding bidirectionnel (`ngModel`).
+- **Barre de navigation** et **pied de page** communs, réutilisés sur toutes les pages via des composants partagés.
+- Données statiques définies dans `src/app/data/articles.data.ts`.
+
+## Notions Angular mises en œuvre
+
+- Composants (navbar, footer, article-card, pages)
+- Data binding : interpolation, property binding, event binding, binding bidirectionnel (`[(ngModel)]`)
+- Directives structurelles : `*ngIf`, `*ngFor`
+- Communication entre composants avec `@Input`
+- Service injectable (`ArticleService`) et injection de dépendances
+- Routage avec `provideRouter`, `routerLink`, `routerLinkActive` et paramètres d'URL (`ActivatedRoute`)
+
+## Lancer le projet en local
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Puis ouvrir http://localhost:4200 dans le navigateur.
 
-## Code scaffolding
+## Déploiement (bonus)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Lien du site déployé sur Firebase Hosting : *(à compléter après déploiement)*

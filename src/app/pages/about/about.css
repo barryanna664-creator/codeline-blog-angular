@@ -1,0 +1,56 @@
+.about-container {
+  padding: 48px 24px 64px;
+  max-width: 800px;
+  margin: 0 auto; /* pour centrer le container */
+}
+
+.about-block {
+  margin-bottom: 40px;
+}
+
+.about-block h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* petit effet joli */
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 auto 12px;
+}
