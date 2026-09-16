@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule],
   selector: 'app-about',
   styleUrl: './about.css',
   templateUrl: './about.html',

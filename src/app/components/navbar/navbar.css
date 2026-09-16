@@ -1,9 +1,10 @@
 .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    position: sticky;
-    top: 0;
-    z-index: 50;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .navbar-inner {
@@ -26,16 +27,31 @@
 }
 
 .nav-links a {
-    font-weight: 500;
-    color: #64748b;
-    text-decoration: none;
-    padding: 6px 2px;
-    border-bottom: 2x solid transparent;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  padding: 6px 2px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4f46e5;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
 .nav-links a.active {
     color: #4f46e5;
-    border-bottom-color: #4f46e5;
 }
 
 .burger {

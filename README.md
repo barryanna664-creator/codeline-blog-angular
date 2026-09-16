@@ -43,4 +43,4 @@ Puis ouvrir http://localhost:4200 dans le navigateur.
 
 ## Déploiement (bonus)
 
-Lien du site déployé sur Firebase Hosting : *(à compléter après déploiement)*
+Lien du site déployé sur Firebase Hosting : https://codeline-blog-angular.web.app
